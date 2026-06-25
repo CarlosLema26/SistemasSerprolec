@@ -1,28 +1,21 @@
-package com.serprolec.inventario.infraestructura.persistencia.jpa;
+﻿package com.serprolec.inventario.infraestructura.persistencia.jpa;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "categorias")
+@Table(name = "categoria")
 public class CategoriaEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
-    private Long idCategoria;
-
-    @Column(name = "nombre_categoria", nullable = false, unique = true)
-    private String nombreCategoria;
-
-    @Column(name = "descripcion")
-    private String descripcion;
-
-    @Column(name = "estado")
-    private String estado;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idCategoria;
+	private String nombreCategoria;
+	private String descripcion;
+	private String estado;
 }

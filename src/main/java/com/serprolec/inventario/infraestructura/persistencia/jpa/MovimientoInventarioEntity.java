@@ -1,49 +1,34 @@
-package com.serprolec.inventario.infraestructura.persistencia.jpa;
+﻿package com.serprolec.inventario.infraestructura.persistencia.jpa;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "movimientos_inventario")
+@Table(name = "movimiento_inventario")
 public class MovimientoInventarioEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_movimiento_inventario")
-    private Long idMovimientoInventario;
-
-    @ManyToOne
-    @JoinColumn(name = "id_producto", nullable = false)
-    private ProductoEntity producto;
-
-    @ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
-    private UsuarioEntity usuario;
-
-    @Column(name = "tipo_movimiento", nullable = false)
-    private String tipoMovimiento;
-
-    @Column(name = "cantidad", nullable = false)
-    private Integer cantidad;
-
-    @Column(name = "stock_anterior", nullable = false)
-    private Integer stockAnterior;
-
-    @Column(name = "stock_nuevo", nullable = false)
-    private Integer stockNuevo;
-
-    @Column(name = "referencia")
-    private String referencia;
-
-    @Column(name = "observacion")
-    private String observacion;
-
-    @Column(name = "fecha_movimiento")
-    private LocalDateTime fechaMovimiento;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idMovimientoInventario;
+	@ManyToOne
+	@JoinColumn(name = "id_producto")
+	private ProductoEntity producto;
+	@ManyToOne
+	@JoinColumn(name = "id_usuario")
+	private UsuarioEntity usuario;
+	private String tipoMovimiento;
+	private Integer cantidad;
+	private Integer stockAnterior;
+	private Integer stockNuevo;
+	private String referencia;
+	private String observacion;
+	private LocalDateTime fechaMovimiento;
 }

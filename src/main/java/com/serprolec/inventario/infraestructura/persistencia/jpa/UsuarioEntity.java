@@ -1,48 +1,32 @@
-package com.serprolec.inventario.infraestructura.persistencia.jpa;
+﻿package com.serprolec.inventario.infraestructura.persistencia.jpa;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 public class UsuarioEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
-    private Long idUsuario;
-
-    @Column(name = "nombres", nullable = false)
-    private String nombres;
-
-    @Column(name = "apellidos", nullable = false)
-    private String apellidos;
-
-    @Column(name = "nombre_usuario", nullable = false, unique = true)
-    private String nombreUsuario;
-
-    @Column(name = "contrasena", nullable = false)
-    private String contrasena;
-
-    @Column(name = "correo")
-    private String correo;
-
-    @Column(name = "telefono")
-    private String telefono;
-
-    @ManyToOne
-    @JoinColumn(name = "id_rol", nullable = false)
-    private RolEntity rol;
-
-    @Column(name = "estado")
-    private String estado;
-
-    @Column(name = "fecha_creacion")
-    private LocalDateTime fechaCreacion;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idUsuario;
+	private String nombres;
+	private String apellidos;
+	private String nombreUsuario;
+	private String contrasena;
+	private String correo;
+	private String telefono;
+	@ManyToOne
+	@JoinColumn(name = "id_rol")
+	private RolEntity rol;
+	private String estado;
+	private LocalDateTime fechaCreacion;
 }

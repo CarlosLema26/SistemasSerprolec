@@ -1,37 +1,24 @@
-package com.serprolec.inventario.infraestructura.persistencia.jpa;
+﻿package com.serprolec.inventario.infraestructura.persistencia.jpa;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "proveedores")
+@Table(name = "proveedor")
 public class ProveedorEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_proveedor")
-    private Long idProveedor;
-
-    @Column(name = "nombre_proveedor", nullable = false)
-    private String nombreProveedor;
-
-    @Column(name = "ruc", unique = true)
-    private String ruc;
-
-    @Column(name = "telefono")
-    private String telefono;
-
-    @Column(name = "correo")
-    private String correo;
-
-    @Column(name = "direccion")
-    private String direccion;
-
-    @Column(name = "estado")
-    private String estado;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idProveedor;
+	private String nombreProveedor;
+	private String ruc;
+	private String telefono;
+	private String correo;
+	private String direccion;
+	private String estado;
 }
