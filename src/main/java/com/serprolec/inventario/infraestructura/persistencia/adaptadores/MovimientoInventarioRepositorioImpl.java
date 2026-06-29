@@ -41,3 +41,5 @@ public class MovimientoInventarioRepositorioImpl implements IMovimientoInventari
 		jpaRepositorio.deleteById(idMovimientoInventario);
 	}
 }
+
+

@@ -1,5 +1,6 @@
 ﻿package com.serprolec.inventario.aplicacion.casosuso.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.serprolec.inventario.aplicacion.casosuso.entradas.IUsuarioUseCase;
@@ -16,6 +17,7 @@ public class UsuarioUseCaseImpl implements IUsuarioUseCase {
 
 	@Override
 	public Usuario guardar(Usuario nuevoUsuario) {
+		nuevoUsuario.setFechaCreacion(LocalDateTime.now());
 		return repositorio.guardar(nuevoUsuario);
 	}
 

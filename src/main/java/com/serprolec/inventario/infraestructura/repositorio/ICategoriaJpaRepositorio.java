@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.CategoriaEntity
 public interface ICategoriaJpaRepositorio extends JpaRepository<CategoriaEntity, Long> {
 
 }
+

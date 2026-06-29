@@ -1,5 +1,6 @@
 ﻿package com.serprolec.inventario.aplicacion.casosuso.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.serprolec.inventario.aplicacion.casosuso.entradas.IProductoUseCase;
@@ -16,6 +17,7 @@ public class ProductoUseCaseImpl implements IProductoUseCase {
 
 	@Override
 	public Producto guardar(Producto nuevoProducto) {
+		nuevoProducto.setFechaRegistro(LocalDateTime.now());
 		return repositorio.guardar(nuevoProducto);
 	}
 

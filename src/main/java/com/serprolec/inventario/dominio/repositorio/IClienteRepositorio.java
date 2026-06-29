@@ -1,6 +1,7 @@
 ﻿package com.serprolec.inventario.dominio.repositorio;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import com.serprolec.inventario.dominio.entidades.Cliente;

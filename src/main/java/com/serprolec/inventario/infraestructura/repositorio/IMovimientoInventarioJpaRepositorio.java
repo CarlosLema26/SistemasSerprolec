@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.MovimientoInven
 public interface IMovimientoInventarioJpaRepositorio extends JpaRepository<MovimientoInventarioEntity, Long> {
 
 }
+

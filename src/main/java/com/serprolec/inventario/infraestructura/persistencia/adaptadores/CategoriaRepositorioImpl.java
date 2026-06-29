@@ -41,3 +41,5 @@ public class CategoriaRepositorioImpl implements ICategoriaRepositorio {
 		jpaRepositorio.deleteById(idCategoria);
 	}
 }
+
+

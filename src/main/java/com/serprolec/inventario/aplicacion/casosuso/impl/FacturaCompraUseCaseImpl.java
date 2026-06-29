@@ -1,5 +1,6 @@
 ﻿package com.serprolec.inventario.aplicacion.casosuso.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.serprolec.inventario.aplicacion.casosuso.entradas.IFacturaCompraUseCase;
@@ -16,6 +17,7 @@ public class FacturaCompraUseCaseImpl implements IFacturaCompraUseCase {
 
 	@Override
 	public FacturaCompra guardar(FacturaCompra nuevoFacturaCompra) {
+		nuevoFacturaCompra.setFechaRegistro(LocalDateTime.now());
 		return repositorio.guardar(nuevoFacturaCompra);
 	}
 

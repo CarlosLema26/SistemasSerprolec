@@ -41,3 +41,5 @@ public class FacturaCompraRepositorioImpl implements IFacturaCompraRepositorio {
 		jpaRepositorio.deleteById(idFacturaCompra);
 	}
 }
+
+

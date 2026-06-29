@@ -41,3 +41,5 @@ public class RolRepositorioImpl implements IRolRepositorio {
 		jpaRepositorio.deleteById(idRol);
 	}
 }
+
+

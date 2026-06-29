@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.ClienteEntity;
 public interface IClienteJpaRepositorio extends JpaRepository<ClienteEntity, Long> {
 
 }
+

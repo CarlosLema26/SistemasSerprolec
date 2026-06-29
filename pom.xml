@@ -71,6 +71,11 @@
 			<version>1.6.3</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.uisrael</groupId>
+			<artifactId>campeonato</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

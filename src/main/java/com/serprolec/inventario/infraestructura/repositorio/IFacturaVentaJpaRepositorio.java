@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.FacturaVentaEnt
 public interface IFacturaVentaJpaRepositorio extends JpaRepository<FacturaVentaEntity, Long> {
 
 }
+

@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.RolEntity;
 public interface IRolJpaRepositorio extends JpaRepository<RolEntity, Long> {
 
 }
+

@@ -7,3 +7,4 @@ import com.serprolec.inventario.infraestructura.persistencia.jpa.ProveedorEntity
 public interface IProveedorJpaRepositorio extends JpaRepository<ProveedorEntity, Long> {
 
 }
+
